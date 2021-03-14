@@ -22,7 +22,7 @@ done;)
 now get your project
 
 cd ~/esp
-got clone http://github..........git
+got clone https://github..........git
 
 cd to that directory
 

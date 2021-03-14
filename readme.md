@@ -54,7 +54,7 @@ Added a new Button to download the jpg-image directly from the camera at given r
 - sometimes occur when switching resolutions on the fly
 - Quality is too high (below 12), especially at high resolutions.
 Also:
-- interrupt latency causes trouble on high resolutions when streaming because wifi also uses interrupts. other system resources.
+- interrupt latency may cause trouble on high resolutions when streaming because wifi also uses interrupts. other system resources.
    So interrupts are not garanteed to occur on time.
 - the unexpected ? hardware defects....etc.
 in essence....errors do occur.
@@ -79,12 +79,5 @@ Lowering the jpg-quality also helps.
 i got 44 fps at VGA with 18Mhz clock and CLK 2x on.  
 100fps at QVGA xclk=40mhz  
 
-## final
-This is still version 1.   
-I tryed to implement things to the best of my knowledge.  
-compiling with idf.py build caused "app_main() not found" ??  
-compiling with make worked.  
-
-I would be pleased to receive feedback via the "issue" section.  
 
 have fun, xenpac;)
