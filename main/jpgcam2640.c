@@ -122,14 +122,10 @@ void wifi_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void
                 switch (disconnect->reason)
                 {
 
-                case WIFI_REASON_AUTH_EXPIRE:
-                case WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT:
-                case WIFI_REASON_BEACON_TIMEOUT:
-                case WIFI_REASON_AUTH_FAIL:
-                case WIFI_REASON_ASSOC_FAIL:
-                case WIFI_REASON_HANDSHAKE_TIMEOUT:
-                case WIFI_REASON_NO_AP_FOUND:
-                    // connect or auth failed
+                case WIFI_REASON_4WAY_HANDSHAKE_TIMEOUT: // 15
+                case WIFI_REASON_NO_AP_FOUND: //201
+                //15=invalid password or not present; 201=ssid not found
+				// if ssid is 0, we will not get here as wifi will just scan.
 
                     wifi_status=2; // we disconnected due to invalid ssid or passwd...try another ssid/passwd
                     break;
